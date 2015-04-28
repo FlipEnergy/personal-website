@@ -93,7 +93,7 @@ svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
 
 /*======================================================Clean the code Below======================================================*/
 body {
-	background-color:#fff;
+	background-color:#d3d3d3;
 }
 
 p {
@@ -104,34 +104,34 @@ p {
 
 
 header {
-	background-color: #262626;
+	background-color: #000;
 	float: left;
 	width:100%;
 }
 
 nav {
 	font-family:"Century Gothic", AppleGothic, sans-serif;
-	font-size: 1.2em;
+	font-size: 2em;
 	padding: 1% 1%;
 }
 nav ul li {display: inline; margin-right: 20px;}
-nav a {color:#fff;}
-nav a:hover {color:#00ff00;
+nav a {color:#008C9E;}
+nav a:hover {color:#00DFFC;
 }
 
-.bird img {margin: 20px 5px;}
-.slogan {padding: 140px 40px 10px;}
-.slogan h1 {font-size:4em;
+.photo img {margin: 20px 5px;}
+.slogan {padding: 120px 40px 10px;}
+.slogan h1 {font-size:4.7em;
 	margin-bottom: 0px;
 	text-transform: uppercase;
 	-webkit-text-shadow: -3px 4px 0px #999999;
 	text-shadow:-3px 4px 0px #999999;
 }
 
-.slogan h2 {color:#666;}
+.slogan h2 {color:#008C9E;}
 
 section.middle {
-	background-color:#262626;
+	background-color:#343838;
 	float:left;
 	width:100%;
 	padding: 20px 0px;
@@ -152,7 +152,7 @@ article.box p {padding: 10px; color:#fff;}
 
 figure {margin-right: 20px; margin-bottom: 20px;}
 figure img {margin:0;}
-figcaption {background-color:#fff; padding: 5px; text-align:center;}
+figcaption {background-color:#d3d3d3; padding: 5px; text-align:center;}
 .feature {text-align:justify; font-size:0.935em; font-family: helvetica, arial, sans-serif; margin-top: 20px;}
 
 footer{border-top:thin solid #666;background-color:#000; width:100%; float: left;}
@@ -161,27 +161,9 @@ footer{border-top:thin solid #666;background-color:#000; width:100%; float: left
 
 /*======================================================Clean the code Above======================================================*/
 
-
-@media screen and (max-width: 480px) {
- /* Add your styles for devices with a maximum width of 480 */
- .slogan {padding: 0px;}
-}
-
-@media screen and (max-width: 768px) {
- /* Add your styles for devices with a maximum width of 768 */
- .slogan {padding: 0px;}
- .birds img {padding-left:20%;}
- .section {text-align:center;}
-}
-
-@media screen and (max-width: 320px) {
- /* Add your styles for devices with a maximum width of 320 */
-}
-
 @media screen and (max-width: 1024px) {
  /* Add your styles for devices with a maximum width of 1024 */
-  .birds img {padding-left:20%;}
   .slogan {
-    padding: 40px 40px 10px;
+    padding: 20px 0px 10px;
 }
 }
