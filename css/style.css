@@ -1,0 +1,187 @@
+/*
+	Responsive Aeon Grid v2.0
+	Designed & Built by Fernando Monteiro, http://www.newaeonweb.com.br
+	Licensed under Unlicense, http://unlicense.org/
+
+	Base stylesheet with CSS Body, quotes, typography, lists, Hyperlinks, tables, forms, media, clearfix and lights
+*/
+
+/* BODY Optmized */
+body {margin: 0; min-height: 100%; -webkit-font-smoothing:antialiased; font-smoothing:antialiased; text-rendering:optimizeLegibility;}
+/* QUOTES */
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none}
+blockquote, q, cite {font-style: italic}
+blockquote {padding-left: 1.5em; border-left: 3px solid #ccc}
+blockquote > p {padding: 0}
+
+h1 {margin: 0; font-size: 2.5em; line-height: 1.2em; margin-bottom: 0.4em} /* 60px / 72px */
+h2 {margin: 0; font-size: 2em; line-height: 1em; margin-bottom: 0.5em} /* 48px / 48px */
+h3 {margin: 0; font-size: 1.5em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 0.6667em} /* 36px / 48px */
+h4 {margin: 0; font-size: 1.0em; line-height: 1em; margin-bottom: 1em} /* 24px / 24px */
+h5 {margin: 0; font-size: 0.835em; line-height: 1.1428571428571428571428571428571em; margin-bottom: 1.1428571428571428571428571428571em} /* 21px / 24px */
+h6 {margin: 0; font-size: 0.80em; line-height: 1.3333333333333333333333333333333em; margin-bottom: 1.3333333333333333333333333333333em} /* 18px / 24px */
+p, ul, blockquote, pre, td, th, label {margin: 0; font-size: 1em; line-height: 1.5em; margin-bottom: 1.5em} /* 16px / 24px */
+small, p.small {margin: 0; font-size: 0.875em; line-height: 1.7142857142857142857142857142857em; margin-bottom: 1.7142857142857142857142857142857em} /* 14px / 24px */
+
+/*	LISTS  */
+ul, ol { margin-bottom: 18px; padding-left: 10px;}
+ul { list-style: none outside; }
+ol { list-style: decimal; }
+ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+ul.square { list-style: square outside; }
+ul.circle { list-style: circle outside; }
+ul.disc { list-style: disc outside; }
+li { margin-bottom: 0px; }
+ul.large li { line-height: 21px; }
+
+/*NAVIGATION*/
+nav {
+	width: 98%;
+	float: left;
+	margin: 0 0 0.2em 0;
+	padding: 0;
+	list-style: none; }
+nav li {
+	float: left;
+	margin-right:20px; }
+
+/* HYPERLINKS */
+a {text-decoration: none; color:#ff7c00}
+a:hover {text-decoration: none}
+a:focus {outline: thin dotted}
+a:hover, a:active {outline: none;} /* Better CSS Outline Suppression */
+
+/* TABLES */
+table {border-collapse: collapse; border-spacing: 0; margin-bottom: 1.5em}
+th {text-align: left}
+tr, th, td {padding-right: 1.5em; border-bottom: 0 solid #333}
+
+/* FORMS */
+form {margin: 0}
+fieldset {border: 0;padding: 0}
+textarea {overflow: auto; vertical-align: top}
+legend {*margin-left: -.75em}
+button, input, select, textarea {vertical-align: baseline; *vertical-align: middle} /* IE7 and older */
+button, input {line-height: normal; *overflow: visible}
+button, input[type="button"], input[type="reset"], input[type="submit"] {cursor: pointer;-webkit-appearance: button}
+input[type="checkbox"], input[type="radio"] {box-sizing: border-box;}
+input[type="search"] {-webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;	box-sizing: content-box}
+input[type="search"]::-webkit-search-decoration {-webkit-appearance: none}
+button::-moz-focus-inner, input::-moz-focus-inner {border: 0; padding: 0}
+
+/* MEDIA */
+figure {margin: 0}
+img, object, embed, video {max-width: 100%;	_width: 100%} /* Fluid images */
+img {border: 0;	-ms-interpolation-mode: bicubic} /* Improve IE's resizing of images */
+svg:not(:root) {overflow: hidden} /* Correct IE9 overflow */
+
+/* CLEARFIX */
+.clear:before, .clear:after {content:"";display:table} /* For modern browsers */
+.clear:after {clear:both}
+.clear {zoom:1} /* For IE 6/7 (trigger hasLayout) */
+
+/* LIGHT TEXT */
+.light {color:#ff7c00;}
+.lightgreen {color:#73880A;}
+.highlight { background-color: #ff0; }
+
+/* FLOATS AND HIDE*/
+.left        { float: left; }
+.right       { float: right; }
+.hide        { display: none; }
+
+/*======================================================Clean the code Below======================================================*/
+body {
+	background-color:#fff;
+}
+
+p {
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	font-size:1em;
+	color:#fff;
+}
+
+
+header {
+	background-color: #262626;
+	float: left;
+	width:100%;
+}
+
+nav {
+	font-family:"Century Gothic", AppleGothic, sans-serif;
+	font-size: 1.2em;
+	padding: 1% 1%;
+}
+nav ul li {display: inline; margin-right: 20px;}
+nav a {color:#fff;}
+nav a:hover {color:#00ff00;
+}
+
+.bird img {margin: 20px 5px;}
+.slogan {padding: 140px 40px 10px;}
+.slogan h1 {font-size:4em;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	-webkit-text-shadow: -3px 4px 0px #999999;
+	text-shadow:-3px 4px 0px #999999;
+}
+
+.slogan h2 {color:#666;}
+
+section.middle {
+	background-color:#262626;
+	float:left;
+	width:100%;
+	padding: 20px 0px;
+}
+
+article.box {
+	margin-top: 40px;
+	-webkit-border-radius: 10px;
+	border-radius:10px;
+	behavior: url(js/pie.htc);
+	background-color: rgb(255,255,255);
+	background-color: rgba(255,255,255, 0.3);
+	-webkit-box-shadow: 0 0 0 5px #ccc;
+	box-shadow:1px 0 0 5px #ccc;
+	min-height: 140px;
+}
+article.box p {padding: 10px; color:#fff;}
+
+figure {margin-right: 20px; margin-bottom: 20px;}
+figure img {margin:0;}
+figcaption {background-color:#fff; padding: 5px; text-align:center;}
+.feature {text-align:justify; font-size:0.935em; font-family: helvetica, arial, sans-serif; margin-top: 20px;}
+
+footer{border-top:thin solid #666;background-color:#000; width:100%; float: left;}
+.copyrights p {padding: 10px 10px; color:#fff; margin: 0px; }
+
+
+/*======================================================Clean the code Above======================================================*/
+
+
+@media screen and (max-width: 480px) {
+ /* Add your styles for devices with a maximum width of 480 */
+ .slogan {padding: 0px;}
+}
+
+@media screen and (max-width: 768px) {
+ /* Add your styles for devices with a maximum width of 768 */
+ .slogan {padding: 0px;}
+ .birds img {padding-left:20%;}
+ .section {text-align:center;}
+}
+
+@media screen and (max-width: 320px) {
+ /* Add your styles for devices with a maximum width of 320 */
+}
+
+@media screen and (max-width: 1024px) {
+ /* Add your styles for devices with a maximum width of 1024 */
+  .birds img {padding-left:20%;}
+  .slogan {
+    padding: 40px 40px 10px;
+}
+}
