@@ -136,7 +136,7 @@ nav a:hover {color:#00DFFC;
 
 h3 {padding: 2px 10px 0px; 
 	font-size:1.5em;
-	color:#fff;
+	color:#008C9E;
 	margin-bottom: 0px;
 }
 
@@ -160,14 +160,13 @@ article.box {
 	-webkit-border-radius: 10px;
 	border-radius:15px;
 	behavior: url(js/pie.htc);
-	background-color: rgb(255,255,255);
-	background-color: rgba(0,95,107, 0.3);
+	background-color: rgb(0,0,0);
 	-webkit-box-shadow: 0 0 0 5px #ccc;
 	box-shadow:1px 0 0 5px #ccc;
 	min-height: 140px;
 }
 
-article.box p {margin-left: 10px; color:#fff;}
+article.box p {margin-left: 10px; color:#008C9E;}
 
 figure {margin-left: 10px;
 		margin-right: 5px;
