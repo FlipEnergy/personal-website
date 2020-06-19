@@ -3,7 +3,7 @@ up:
 	docker-compose up -d
 
 build:
-	docker build -t dennis_site$(tag) .
+	docker build -t flipenergy$(tag) .
 
 stop:
 	docker-compose stop
