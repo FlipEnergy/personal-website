@@ -1,8 +1,11 @@
 
 up:
-	docker-compose up --build -d
+	docker-compose up -d
 
-down:
+build:
+	docker build -t dennis_site .
+
+stop:
 	docker-compose stop
 
 clean:

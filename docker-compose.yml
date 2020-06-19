@@ -1,7 +1,8 @@
 version: '3.8'
 services:
   web:
-    build: .
-    image: dennis_site
+    image: nginx:stable
     ports:
       - "80:80"
+    volumes:
+      - ./src:/usr/share/nginx/html
