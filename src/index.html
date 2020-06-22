@@ -16,9 +16,6 @@
 	<link rel="stylesheet" type="text/css" media="all" href="css/grid.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
 
-<!-- HTML5 IE Enabling Script -->
-<!--[if lt IE 9]><script src="js/html5.js"></script>
-<![endif]-->
 </head>
 
 <body>
@@ -28,7 +25,7 @@
 	<div class="content">
 			<nav>
 				<ul id="nav">
-					<li><a target="_blank" href="images/Kitty.gif">Dennis Zhang</a></li>
+					<li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Dennis Zhang</a></li>
 					<li><a target="_blank" href="https://drive.google.com/file/d/0B8nn5JeeHOuuMnBZQWRoYnBzaVE/view?usp=sharing">Resume</a></li>
 					<li><a target="_blank" href="https://github.com/FlipEnergy">Github</a></li>
 					<li><a target="_blank" href="https://ca.linkedin.com/in/denniszhangflipenergy">LinkedIn</a></li>
@@ -64,13 +61,59 @@
 			<div class="col12">
 				<div class="col8">
 					<div class="photo">
+						<img src="images/HomeLab2.png" alt="" />
+					</div>
+				</div><!-- box left-->
+
+				<div class="col4 last">
+					<article class="box">
+						<h3>The Homelab V2.0</h3>
+						<p>I had turn my k8s cluster into a single node because I needed a separate machine to act as a load balancer otherwise my gateway get confused because although each k8s service has it's own IP from metallb, they share the machine's mac address and port-forwarding will sometimes send it down the wrong IP.</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>Pi-hole DNS nameserver for ad blocking, using upstream dnscrypt-proxy for DNS over TLS. I set all my machines to use this as DNS resolver.</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>Surface 3 running HAProxy to foward traffic from internet to my website and VPN in K8s</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>My server runs Kubernetes with Metallb to assign Ip addresses to services. It's deployed using Helm3 and runs some dashboards and the following</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>OpenVPN for home network access and remote ad blocking running in k8s cluster</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>Folding@home protein folding for science running in k8s cluster</p>
+						<figure img class="left">
+							<img src="images/bullet.png" alt="" />
+						</figure>
+						<p>This website is served out of the k8s cluster and auto scales. This is not an invitation to test it out.</p>
+						<br>
+					</article>
+				</div> <!-- box right -->
+			</div>
+		</div><!-- /content -->
+	</div><!-- /container -->
+</section>
+
+<section class="middle">
+	<div class="container"><!--Beginning of content-->
+		<div class="content">
+			<div class="col12">
+				<div class="col8">
+					<div class="photo">
 						<img src="images/HomeLab.png" alt="" />
 					</div>
 				</div><!-- box left-->
 
 				<div class="col4 last">
 					<article class="box">
-						<h3>The Homelab</h3>
+						<h3>The Homelab V1.0</h3>
 						<figure img class="left">
 							<img src="images/bullet.png" alt="" />
 						</figure>
@@ -97,13 +140,8 @@
 						<p>This website is served out of the k8s cluster</p>
 						<br>
 					</article>
-					<article class="box">
-						<br>
-						<iframe src="https://www.youtube.com/embed/nHc288IPFzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<br>
-					</article>
 				</div> <!-- box right -->
-				</div>
+			</div>
 		</div><!-- /content -->
 	</div><!-- /container -->
 </section>
@@ -111,10 +149,13 @@
 <section class="middle">
 	<div class="container"><!--Beginning of content-->
 		<div class="content">
-			<div class="col12">
-			</div>
-			</div>
-    </div><!-- /container -->
+			<article class="box">
+				<br>
+				<iframe src="https://www.youtube.com/embed/nHc288IPFzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<br>
+			</article>
+		</div><!-- /content -->
+	</div><!-- /container -->
 </section>
 
 <footer>
