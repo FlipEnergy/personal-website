@@ -68,11 +68,12 @@
 				<div class="col4 last">
 					<article class="box">
 						<h3>The Homelab V2.0</h3>
-						<p>I had turn my k8s cluster into a single node because I needed a separate machine to act as a load balancer otherwise my gateway get confused because although each k8s service has it's own IP from metallb, they share the machine's mac address and port-forwarding will sometimes send it down the wrong IP.</p>
+						<p>I had to turn my k8s cluster into a single node because I needed a separate machine to act as a load balancer otherwise my gateway gets confused. Although each k8s service has its own IP from MetalLB, they share the machine network interface mac address and port-forwarding will sometimes send it down to the wrong IP.</p>
+						<br>
 						<figure img class="left">
 							<img src="images/bullet.png" alt="" />
 						</figure>
-						<p>Pi-hole DNS nameserver for ad blocking, using upstream dnscrypt-proxy for DNS over TLS. I set all my machines to use this as DNS resolver.</p>
+						<p>Pi-hole DNS nameserver for ad blocking, using upstream dnscrypt-proxy for DNS over TLS. I set all my machines to use this as their primary DNS nameserver.</p>
 						<figure img class="left">
 							<img src="images/bullet.png" alt="" />
 						</figure>
@@ -80,7 +81,7 @@
 						<figure img class="left">
 							<img src="images/bullet.png" alt="" />
 						</figure>
-						<p>My server runs Kubernetes with Metallb to assign Ip addresses to services. It's deployed using Helm3 and runs some dashboards and the following</p>
+						<p>My server runs Kubernetes with Metallb to assign Ip addresses to services. It's deployed using Helm3 and runs some dashboards and the following:</p>
 						<figure img class="left">
 							<img src="images/bullet.png" alt="" />
 						</figure>
