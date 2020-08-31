@@ -1,5 +1,5 @@
 ---
-title: "Version 1.0"
+title: "Homelab Version 1.0"
 date: 2020-08-31T00:12:51-07:00
 draft: false
 ---
