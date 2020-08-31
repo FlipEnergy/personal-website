@@ -3,13 +3,15 @@
 
   {{ partial "hero.html" . }}
 
-  <h1 class="headline">My Homelab</h1>
+  <h1 class="headline">Current Homelab Diagram</h1>
 
   <div class="diagram">
     <img src="{{ "img/homelab.png" | relURL }}">
   </div>
 
   <br>
+
+  <h1 class="headline">Recent Posts</h1>
 
   {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") (or .Site.Params.paginate 3) }}
   <div class="article-list">

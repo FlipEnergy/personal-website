@@ -6,7 +6,7 @@ draft: false
 
 ## I must have lost all self-respect. I can't believe I'm turning my website into a blog.
 
-Anyways, this is site is only meant as a place for me to document the evolution of my homelab.
+Anyways, this site is only meant as a place for me to document the evolution of my homelab.
 
 You probably already saw the diagram I made on the homepage, which I will be updating as time goes on. I'll post previous versions of the diagram in later posts too.
 
