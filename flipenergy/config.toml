@@ -1,0 +1,4 @@
+baseURL = "https://pleasenoddos.com/"
+languageCode = "en-us"
+title = "Dennis Zhang"
+theme = "base16"

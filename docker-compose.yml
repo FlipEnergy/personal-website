@@ -5,5 +5,5 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./src:/usr/share/nginx/html
+      - ./flipenergy/public:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
