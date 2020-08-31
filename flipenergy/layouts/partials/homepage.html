@@ -9,6 +9,8 @@
     <img src="{{ "img/homelab.png" | relURL }}">
   </div>
 
+  <br>
+
   {{ $paginator := .Paginate (where .Site.RegularPages "Section" "post") (or .Site.Params.paginate 3) }}
   <div class="article-list">
     {{ range $paginator.Pages }}
