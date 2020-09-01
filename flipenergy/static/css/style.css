@@ -77,8 +77,8 @@ article.single section,
   background-color: var(--base07);
   color: #2d2d2d;
   color: var(--base00);
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
