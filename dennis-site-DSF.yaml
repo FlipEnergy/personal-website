@@ -14,7 +14,7 @@ apps:
   dennis-site:
     namespace: "dennis-site"
     enabled: true
-    chart: "./helm_chart/flipenergy"
+    chart: "./helm_chart"
     version: "0.1.0"
     set:
       "image.tag": "$DENNIS_SITE_VERSION"
