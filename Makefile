@@ -11,5 +11,8 @@ dc-up:
 dc-stop:
 	docker-compose stop
 
-clean:
+dc-down:
 	docker-compose down
+
+deploy:
+	helmsman --apply -f dennis-site-DSF.yaml

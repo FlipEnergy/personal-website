@@ -1,0 +1,20 @@
+context: homelab
+
+metadata:
+  maintainer: "Dennis Zhang (dennis.zhang.nrg@gmail.com)"
+  description: "Helmman DSF for my personal website"
+
+settings:
+  kubeContext: "microk8s"
+
+namespaces:
+  dennis-site:
+
+apps:
+  dennis-site:
+    namespace: "dennis-site"
+    enabled: true
+    chart: "./helm_chart/flipenergy"
+    version: "0.1.0"
+    set:
+      "image.tag": "$DENNIS_SITE_VERSION"
