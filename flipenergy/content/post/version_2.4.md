@@ -6,7 +6,7 @@ draft: false
 
 Since I wanted to update my website to what you see now, I had to speed up the time it takes to iterate. In fact, I want full CI/CD. In addition to that reason, I think it's just fun to automate things in general. I'm sure I can think of more ways to use concourse down the road.
 
-Before Concourse, I had to build, tag and push my images in the commandline. At the point of this writing, I have 2 pipelines, one to build images off the default branch and another for when I'm ready to publish.
+Before Concourse, I had to build, tag and push my images on the command line. At the point of this writing, the pipeline for my site contains 2 jobs, one to build images off the default branch and another for when I'm ready to publish.
 
 ![Personal Website Pipeline](website_concourse.png)
 ![Personal Website Tasks](website_master_concourse_tasks.png)
