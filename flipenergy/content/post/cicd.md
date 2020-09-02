@@ -4,7 +4,7 @@ date: 2020-09-01T19:50:25-07:00
 draft: false
 ---
 
-Hell yeah! I enhanced my existing concourse pipeline of simply building the images to also grab secrets and run a k8s deployment. From a simple bump of a version file, my pipeline will now build, tag, and push an image, then deploy the new image into my k8s cluster for the world to see.
+Hell yeah! I enhanced my existing concourse pipeline of simply building the images to also grab secrets and run a k8s deployment. From a simple bump of a version file, my pipeline will now build, tag, and push an image, then deploy the new image into my k8s cluster for the world to see. Of course, I get a Mattermost notification when it succeeds or fails.
 
 To outline roughly what the stack is for this website:
 - [Hugo](https://gohugo.io/): A wonderful static site generator written in Go.
@@ -22,3 +22,6 @@ Here's the pipeline:
 
 And here is the job in *deploy-to-k8s* job:
 ![Deploy to K8s Job](website_deploy.png)
+
+Mattermost Notification:
+![Mattermost Notification](concourse_mattermost.png)
