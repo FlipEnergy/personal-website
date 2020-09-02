@@ -20,7 +20,7 @@ You can also checkout my [Concourse Repo](https://github.com/FlipEnergy/concours
 Here's the pipeline:
 ![Website CICD Pipeline](website_concourse.png)
 
-And here is the job in *deploy-to-k8s* job:
+And here is the deploy task in *deploy-to-k8s* job:
 ![Deploy to K8s Job](website_deploy.png)
 
 Mattermost Notification:
