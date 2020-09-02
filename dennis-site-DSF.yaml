@@ -14,6 +14,7 @@ apps:
   dennis-site:
     namespace: "dennis-site"
     enabled: true
+    wait: true
     chart: "./helm_chart"
     version: "0.1.0"
     set:
