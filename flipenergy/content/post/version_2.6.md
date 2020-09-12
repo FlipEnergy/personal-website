@@ -4,6 +4,8 @@ date: 2020-09-06T14:22:34-07:00
 draft: false
 ---
 
+EDIT 2020-09-11: Yeah... so since invidious is a web scraper, Google partially blocks after a while so I don't have full functionality all the time. So instead of self-hosting this, I'm just gonna use another public instance.
+
 I came across a [reddit post](https://www.reddit.com/r/chrome/comments/imrp1s/extension_that_redirects_a_url_to_another/) in which OP asked for a redirector chrome extension to forward YouTube video urls to something called Invidious. I was intrigued. With a quick whoogle, I found that this was something I needed in my life. The YouTube site pretty bloated and I just know they have tons of trackers and stuff for ads there. Anyways, I found in their opensource github repo that they actually had a helm chart (though not as fleshed out as I'd like) and went and set it up right away without any major issues. The site uses RSS for chanel subscriptions which I was able to export from YouTube and because it's so light, I'm replacing my youtube app on my phone with a shortcut to this site. No ads!
 
 I recommend checking it out! They have public instances too if you don't want to self-host.
