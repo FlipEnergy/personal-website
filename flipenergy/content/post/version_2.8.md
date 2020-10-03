@@ -1,5 +1,5 @@
 ---
-title: "V2.6 - Nextcloud"
+title: "V2.8 - Nextcloud"
 date: 2020-10-03T00:09:52-07:00
 draft: false
 ---
