@@ -11,4 +11,4 @@ I flashed a [Ubuntu Bionic minimal image](https://github.com/ayufan-rock64/linux
 Anyways, updated the diagram to reflect the new hardware. I'll have to find a new use for the surface 3. I couldn't add it as a new k8s node because it was simply not powerful enough. Just the overhead of running k8s on it was using up most of its resources.
 
 Updated Diagram:
-![Version 23.0 Diagram](homelab3.0.png)
+![Version 3.0 Diagram](homelab3.0.png)
