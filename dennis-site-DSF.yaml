@@ -18,3 +18,5 @@ apps:
     chart: "./helm_chart"
     version: "0.1.0"
     valuesFile: "helm_chart/values-override.yaml"
+    set:
+      "image.tag": "$DENNIS_SITE_VERSION"
