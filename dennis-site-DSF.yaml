@@ -17,5 +17,4 @@ apps:
     wait: true
     chart: "./helm_chart"
     version: "0.1.0"
-    set:
-      "image.tag": "$DENNIS_SITE_VERSION"
+    valuesFile: "helm_chart/values-override.yaml"
