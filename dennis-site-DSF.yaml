@@ -1,22 +1,22 @@
 context: homelab
 
 metadata:
-  maintainer: "Dennis Zhang (dennis.zhang.nrg@gmail.com)"
-  description: "Helmman DSF for my personal website"
+  maintainer: Dennis Zhang (dennis.zhang.nrg@gmail.com)
+  description: Helmman DSF for my personal website
 
 settings:
-  kubeContext: "microk8s"
+  kubeContext: microk8s
 
 namespaces:
   dennis-site:
 
 apps:
   dennis-site:
-    namespace: "dennis-site"
+    namespace: dennis-site
     enabled: true
     wait: true
-    chart: "./helm_chart"
-    version: "0.1.0"
-    valuesFile: "helm_chart/values-override.yaml"
+    chart: ./helm_chart
+    version: 0.1.0
+    valuesFile: helm_chart/values-override.yaml
     set:
-      "image.tag": "$DENNIS_SITE_VERSION"
+      image.tag: $DENNIS_SITE_VERSION
