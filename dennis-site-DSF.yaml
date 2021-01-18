@@ -5,7 +5,7 @@ metadata:
   description: Helmman DSF for my personal website
 
 settings:
-  kubeContext: k3s
+  kubeContext: default
 
 namespaces:
   dennis-site:
