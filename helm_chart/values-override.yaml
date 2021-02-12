@@ -39,10 +39,12 @@ nodeSelector:
 affinity:
   podAntiAffinity:
     preferredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-              matchExpressions:
-              - key: app.kubernetes.io/instance
-                operator: In
-                values:
-                - dennis-site
-        topologyKey: "kubernetes.io/hostname"
+      - weight: 1
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: app.kubernetes.io/instance
+              operator: In
+              values:
+              - dennis-site
+          topologyKey: "kubernetes.io/hostname"
