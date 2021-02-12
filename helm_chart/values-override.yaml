@@ -19,7 +19,6 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-
 resources:
   # limits:
   #   cpu: 100m
@@ -29,7 +28,7 @@ resources:
     memory: 64Mi
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 1
   maxReplicas: 4
   targetCPUUtilizationPercentage: 80
