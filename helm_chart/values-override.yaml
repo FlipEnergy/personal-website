@@ -38,7 +38,7 @@ nodeSelector:
 
 affinity:
   podAntiAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
+    preferredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
               matchExpressions:
               - key: app.kubernetes.io/instance
