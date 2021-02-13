@@ -36,15 +36,4 @@ autoscaling:
 nodeSelector:
   kubernetes.io/arch: amd64
 
-affinity:
-  podAntiAffinity:
-    preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-            - key: app.kubernetes.io/instance
-              operator: In
-              values:
-              - dennis-site
-          topologyKey: "kubernetes.io/hostname"
+affinity: {}
