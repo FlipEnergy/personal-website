@@ -22,11 +22,12 @@
   <div class="container clearfix">
     <a class="path" href="{{ .Site.BaseURL }}">[&#8962;]</a>
     <a class="path" href="{{ .Site.BaseURL }}post/">[Posts]</a>
+    <a class="path" target="_blank" href="https://owncast.pleasenoddos.com/">[Stream]</a>
     <a class="path" target="_blank" href="https://kube.pleasenoddos.com/#scale=2">[What's in the (K8s) box?]</a>
-    <a class="path" target="_blank" href="http://status.pleasenoddos.com">[Uptime]</a>
     <a class="path" target="_blank" href="files/Dennis_Zhang_Resume.pdf">[Resume]</a>
     <a class="path" target="_blank" href="https://github.com/FlipEnergy">[Github]</a>
     <a class="path" target="_blank" href="https://ca.linkedin.com/in/denniszhangflipenergy">[LinkedIn]</a>
+    <a class="path" target="_blank" href="http://status.pleasenoddos.com">[Uptime]</a>
     <div class="right">
       {{ range $i, $page := (where .Site.Pages "Section" "pages") }}
         {{ if not (eq $i 0) }}|{{ end }}
