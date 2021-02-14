@@ -5,6 +5,8 @@ draft: false
 ---
 
 # 3-node k3s cluster
+*Edit: I had to take the surface offline because it had networking issues and would break my the ingress of my entire cluster.*
+
 Since I've started, I wanted to have a 3 node cluster. Microk8s was too heavy and I couldn't run it on my rock64. It couldn't even run on my old surface well enough. Thankfully now that I switched over to k3s, it's super light and can run comfortably on all my hardware. As mentioned in my previous post about K3s, I personally think it's a much better distribution for homelab k8s.
 
 Thanks to the good practice of infrastructure as code, setting up this new node was as simple as installing the OS add it to my ansible hosts inventory and running the playbook. My automation adds it as a k3s node to my existing cluster seamlessly.
