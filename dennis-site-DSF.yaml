@@ -5,7 +5,7 @@ metadata:
   description: Helmman DSF for my personal website
 
 settings:
-  kubeContext: default
+  globalMaxHistory: 5
 
 namespaces:
   dennis-site:
