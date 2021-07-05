@@ -14,15 +14,18 @@ strategy:
   type: Recreate
 
 service:
-  port:
-    port: 80
+  main:
+    ports:
+      http:
+        port: 80
 
 ingress:
-  enabled: true
-  hosts:
-  - host: pleasenoddos.com
-    paths:
-      - path: /
+  main:
+    enabled: true
+    hosts:
+    - host: pleasenoddos.com
+      paths:
+        - path: /
 
 resources:
   limits:
