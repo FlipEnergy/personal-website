@@ -7,11 +7,11 @@
 
 image:
   repository: flipenergy/flipenergy
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: latest
 
 strategy:
-  type: Recreate
+  type: RollingUpdate
 
 service:
   main:
@@ -23,9 +23,9 @@ ingress:
   main:
     enabled: true
     hosts:
-    - host: pleasenoddos.com
-      paths:
-        - path: /
+      - host: pleasenoddos.com
+        paths:
+          - path: /
 
 resources:
   limits:
