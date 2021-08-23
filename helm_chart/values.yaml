@@ -26,10 +26,6 @@ ingress:
       - host: pleasenoddos.com
         paths:
           - path: /
-    tls:
-     - secretName: letsencrypt-tls
-       hosts:
-         - pleasenoddos.com
 
 resources:
   limits:
