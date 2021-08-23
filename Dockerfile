@@ -1,4 +1,4 @@
-FROM klakegg/hugo:alpine AS builder
+FROM klakegg/hugo:latest AS builder
 WORKDIR /tmp
 
 COPY flipenergy/ .
