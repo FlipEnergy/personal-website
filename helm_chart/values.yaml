@@ -26,6 +26,8 @@ ingress:
       - host: pleasenoddos.com
         paths:
           - path: /
+    annotations:
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 
 resources:
   limits:
