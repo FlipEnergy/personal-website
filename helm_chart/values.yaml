@@ -23,6 +23,9 @@ ingress:
   main:
     enabled: true
     hosts:
+      - host: www.pleasenoddos.com
+        paths:
+          - path: /
       - host: pleasenoddos.com
         paths:
           - path: /
