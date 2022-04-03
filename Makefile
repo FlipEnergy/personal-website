@@ -14,7 +14,7 @@ dc-down:
 	docker-compose down
 
 install-hugo:
-	wget https://github.com/gohugoio/hugo/releases/download/v0.79.0/hugo_0.79.0_Linux-64bit.deb
-	sudo dpkg -i hugo_0.79.0_Linux-64bit.deb
+	wget https://github.com/gohugoio/hugo/releases/download/v0.96.0/hugo_0.96.0_Linux-64bit.deb
+	sudo dpkg -i hugo_0.96.0_Linux-64bit.deb
 	hugo version
-	rm hugo_0.79.0_Linux-64bit.deb
+	rm hugo_0.96.0_Linux-64bit.deb
