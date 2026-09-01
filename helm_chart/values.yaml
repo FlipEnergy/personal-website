@@ -1,10 +1,18 @@
 controllers:
   main:
     containers:
-      image:
-        repository: flipenergy/flipenergy
-        pullPolicy: Always
-        tag: latest
+      main:
+        image:
+          repository: flipenergy/flipenergy
+          pullPolicy: Always
+          tag: latest
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 50m
+            memory: 64Mi
 
 strategy:
   type: RollingUpdate
@@ -34,11 +42,3 @@ ingress:
         hosts:
           - pleasenoddos.com
           - www.pleasenoddos.com
-
-resources:
-  limits:
-    cpu: 100m
-    memory: 128Mi
-  requests:
-    cpu: 50m
-    memory: 64Mi
