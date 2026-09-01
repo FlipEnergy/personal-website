@@ -1,16 +1,20 @@
-image:
-  repository: flipenergy/flipenergy
-  pullPolicy: Always
-  tag: latest
+controllers:
+  main:
+    containers:
+      image:
+        repository: flipenergy/flipenergy
+        pullPolicy: Always
+        tag: latest
 
 strategy:
   type: RollingUpdate
 
 service:
   main:
+    controller: main
     ports:
       http:
-        port: 80
+        port: 8080
 
 ingress:
   main:
@@ -33,8 +37,8 @@ ingress:
 
 resources:
   limits:
-    cpu: 500m
+    cpu: 100m
     memory: 128Mi
   requests:
-    cpu: 100m
+    cpu: 50m
     memory: 64Mi
