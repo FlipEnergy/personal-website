@@ -6,14 +6,12 @@ Based off a template. I'm not much of a front-end guy.
 
 ### Hugo Installation
 
-Get link from https://github.com/gohugoio/hugo/releases and install the 64bit.deb version of the binary
+Install Hugo 0.96.0 from the `.deb` release:
+```
+make install-hugo
+```
 
-Example:
-```
-wget https://github.com/gohugoio/hugo/releases/download/v0.74.3/hugo_0.74.3_Linux-64bit.deb
-sudo dpkg -i hugo_0.74.3_Linux-64bit.deb
-hugo version
-```
+Run the dev server with `make up`. CI builds the site with the `klakegg/hugo:alpine` image and serves it with nginx.
 
 # Theme
 My site uses the [base16](https://github.com/htdvisser/hugo-base16-theme) theme for Hugo.
