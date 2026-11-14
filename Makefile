@@ -1,8 +1,8 @@
 up:
-	cd flipenergy && hugo server -D
+	cd flipenergy && mise exec -- hugo server -D
 
 new:
-	cd flipenergy && hugo new post/$(name).md
+	cd flipenergy && mise exec -- hugo new post/$(name).md
 
 dc-up:
 	docker-compose up -d
@@ -13,8 +13,5 @@ dc-stop:
 dc-down:
 	docker-compose down
 
-install-hugo:
-	wget https://github.com/gohugoio/hugo/releases/download/v0.96.0/hugo_0.96.0_Linux-64bit.deb
-	sudo dpkg -i hugo_0.96.0_Linux-64bit.deb
-	hugo version
-	rm hugo_0.96.0_Linux-64bit.deb
+tools:
+	mise install

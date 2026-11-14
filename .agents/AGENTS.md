@@ -26,7 +26,7 @@ Hugo static blog/homepage for https://pleasenoddos.com (owner: FlipEnergy / Denn
 | Path | Purpose |
 |---|---|
 | `flipenergy/` | Hugo site root (`config.toml`, `content/post/`, `layouts/`, `static/`, `archetypes/`). |
-| `flipenergy/themes/base16` | Git **submodule**: htdvisser/hugo-base16-theme. Clone with `--recursive` or run `git submodule update --init`. Don't edit theme files; override in `flipenergy/layouts/` instead. |
+| `flipenergy/themes/base16` | Git **submodule**: htdvisser/hugo-base16-theme. Clone with `--recursive` or run `git submodule update --init` (without it the homepage renders blank). Don't edit theme files; override in `flipenergy/layouts/` instead. |
 | `flipenergy/layouts/` | Local overrides: `404.html`, `partials/{header,hero,homepage,footer}.html`. |
 | `flipenergy/static/` | `css/style.css`, images (`img/homelab.jpg` is linked from other repos' READMEs — keep the path stable), favicon. |
 | `Dockerfile` | `nginx:stable`, copies `public/` + `nginx.conf`. Build context expects a top-level `public/` (CI copies `flipenergy/public` there). |
@@ -38,10 +38,11 @@ Hugo static blog/homepage for https://pleasenoddos.com (owner: FlipEnergy / Denn
 
 - Path: `flipenergy/content/post/<slug>.md`; images go in `flipenergy/content/post/<slug>/` and are referenced relatively.
 - Front matter: `title`, `date`, `draft`. New posts: `make new name=<slug>` (archetype sets `draft: true` — flip it to `false` to publish).
-- Hugo version used locally is 0.96.0 (`make install-hugo`); CI uses `klakegg/hugo:alpine`. Avoid features newer than 0.96.
+- Hugo is pinned to 0.96.0 in `mise.toml` (install with `make tools`; the Makefile runs it via `mise exec`). CI uses `klakegg/hugo:alpine`. Avoid features newer than 0.96.
 
 ## Commands
 
+- `make tools` — `mise install` (Hugo).
 - `make up` — `hugo server -D` (dev server, drafts included).
 - `make new name=<slug>` — new post.
 - `make dc-up` / `dc-stop` / `dc-down` — run the published image with docker-compose.

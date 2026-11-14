@@ -3,8 +3,6 @@
 
   {{ partial "hero.html" . }}
 
-  <h1 class="headline">Current Homelab Diagram</h1>
-
   <div class="diagram">
     {{ readFile "static/img/homelab.svg" | safeHTML }}
   </div>
