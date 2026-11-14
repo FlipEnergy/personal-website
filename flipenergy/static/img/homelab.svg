@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1034" width="900" height="1034" class="hl-diagram" role="img" aria-labelledby="hl-title hl-desc">
+<title id="hl-title">Dennis Zhang's homelab, November 2026</title>
+<desc id="hl-desc">Visitors reach the homelab through Cloudflare, then an OPNsense firewall, into a three-node Kubernetes cluster on Talos Linux running self-hosted apps, with a TrueNAS box for NFS storage and offsite backups to Backblaze B2. Changes ship from GitHub through Concourse CI, which runs Helmsman, image builds and OpenTofu.</desc>
+<style>
+.hl-diagram text { font-family: 'Source Code Pro', 'DejaVu Sans Mono', monospace; }
+.hl-diagram .hl-t { font-weight: 700; }
+.hl-diagram .hl-s { font-size: 12px; fill: #a09f93; }
+.hl-diagram .hl-c { font-size: 13px; fill: #f2f0ec; }
+.hl-diagram .hl-h { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; }
+</style>
+<defs>
+<marker id="hl-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a09f93"/></marker>
+<marker id="hl-arrow-s" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0 L0,5 L10,10 z" fill="#a09f93"/></marker>
+</defs>
+<rect width="900" height="1034" fill="#2d2d2d"/>
+<text x="30" y="22" text-anchor="start" class="hl-h" fill="#f99157">THE INTERNET</text>
+<rect x="30" y="36" width="170" height="60" rx="8" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="115.0" y="63.0" text-anchor="middle" class="hl-t" font-size="15" fill="#f2f0ec">visitors</text>
+<text x="115.0" y="81.0" text-anchor="middle" class="hl-s">and me, remotely</text>
+<rect x="250" y="36" width="280" height="60" rx="8" fill="#393939" stroke="#f99157" stroke-width="1.5"/>
+<text x="390.0" y="63.0" text-anchor="middle" class="hl-t" font-size="15" fill="#f99157">Cloudflare</text>
+<text x="390.0" y="81.0" text-anchor="middle" class="hl-s">DNS · proxy · TLS edge</text>
+<rect x="580" y="36" width="130" height="60" rx="8" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="645.0" y="63.0" text-anchor="middle" class="hl-t" font-size="15" fill="#f2f0ec">GitHub</text>
+<text x="645.0" y="81.0" text-anchor="middle" class="hl-s">source of truth</text>
+<rect x="740" y="36" width="130" height="60" rx="8" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="805.0" y="63.0" text-anchor="middle" class="hl-t" font-size="15" fill="#f2f0ec">Codeberg</text>
+<text x="805.0" y="81.0" text-anchor="middle" class="hl-s">mirror</text>
+<path d="M200,66 L248,66" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<path d="M710,66 L738,66" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<rect x="14" y="130" width="872" height="580" rx="14" fill="none" stroke="#6699cc" stroke-width="2" stroke-dasharray="10 6"/>
+<text x="870" y="152" text-anchor="end" class="hl-h" fill="#6699cc">HOME NETWORK</text>
+<rect x="300" y="160" width="300" height="56" rx="8" fill="#393939" stroke="#6699cc" stroke-width="1.5"/>
+<text x="450.0" y="185.0" text-anchor="middle" class="hl-t" font-size="15" fill="#6699cc">OPNsense</text>
+<text x="450.0" y="203.0" text-anchor="middle" class="hl-s">firewall · local DNS</text>
+<path d="M390,96 L390,158" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<text x="398" y="118" text-anchor="start" class="hl-s" fill="#a09f93">HTTPS</text>
+<path d="M115,96 L115,188 L298,188" fill="none" stroke="#a09f93" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#hl-arrow)"/>
+<text x="124" y="180" text-anchor="start" class="hl-s" fill="#a09f93">WireGuard VPN</text>
+<rect x="30" y="250" width="600" height="440" rx="10" fill="#393939" fill-opacity="0.45" stroke="#66cccc" stroke-width="1.8"/>
+<path d="M330,216 L330,248" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<text x="50" y="278" text-anchor="start" class="hl-t" fill="#66cccc">Kubernetes on Talos Linux</text>
+<text x="610" y="278" text-anchor="end" class="hl-s" fill="#a09f93">managed with Helmsman</text>
+<rect x="50" y="294" width="176" height="50" rx="6" fill="#2d2d2d" stroke="#66cccc" stroke-opacity="0.7"/>
+<text x="138" y="315" text-anchor="middle" class="hl-c" font-weight="700">high-perf node</text>
+<text x="138" y="333" text-anchor="middle" class="hl-s">control plane + apps</text>
+<rect x="242" y="294" width="176" height="50" rx="6" fill="#2d2d2d" stroke="#66cccc" stroke-opacity="0.7"/>
+<text x="330" y="315" text-anchor="middle" class="hl-c" font-weight="700">medium node</text>
+<text x="330" y="333" text-anchor="middle" class="hl-s">control plane + apps</text>
+<rect x="434" y="294" width="176" height="50" rx="6" fill="#2d2d2d" stroke="#66cccc" stroke-opacity="0.7"/>
+<text x="522" y="315" text-anchor="middle" class="hl-c" font-weight="700">medium node</text>
+<text x="522" y="333" text-anchor="middle" class="hl-s">control plane + apps</text>
+<rect x="50" y="362" width="560" height="38" rx="6" fill="#2d2d2d" stroke="#f99157" stroke-opacity="0.7"/>
+<text x="330" y="386" text-anchor="middle" class="hl-c">ingress-nginx · cert-manager · cf-ddns</text>
+<text x="50" y="428" text-anchor="start" class="hl-h" fill="#ffcc66">apps</text>
+<rect x="50" y="438" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="114.0" y="459" text-anchor="middle" class="hl-c">Nextcloud</text>
+<rect x="194" y="438" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="258.0" y="459" text-anchor="middle" class="hl-c">Vaultwarden</text>
+<rect x="338" y="438" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="402.0" y="459" text-anchor="middle" class="hl-c">WireGuard</text>
+<rect x="482" y="438" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="546.0" y="459" text-anchor="middle" class="hl-c">gonic</text>
+<rect x="50" y="478" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="114.0" y="499" text-anchor="middle" class="hl-c">Stash</text>
+<rect x="194" y="478" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="258.0" y="499" text-anchor="middle" class="hl-c">flatnotes</text>
+<rect x="338" y="478" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="402.0" y="499" text-anchor="middle" class="hl-c">HabitTrove</text>
+<rect x="482" y="478" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="546.0" y="499" text-anchor="middle" class="hl-c">PiKaraoke</text>
+<rect x="50" y="518" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="114.0" y="539" text-anchor="middle" class="hl-c">discodrome</text>
+<rect x="194" y="518" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="258.0" y="539" text-anchor="middle" class="hl-c">grocery-deals</text>
+<rect x="338" y="518" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
+<text x="402.0" y="539" text-anchor="middle" class="hl-c">this website</text>
+<text x="50" y="580" text-anchor="start" class="hl-h" fill="#99cc99">platform</text>
+<rect x="50" y="590" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="114.0" y="611" text-anchor="middle" class="hl-c">Concourse CI</text>
+<rect x="194" y="590" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="258.0" y="611" text-anchor="middle" class="hl-c">PostgreSQL</text>
+<rect x="338" y="590" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="402.0" y="611" text-anchor="middle" class="hl-c">Redis</text>
+<rect x="482" y="590" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="546.0" y="611" text-anchor="middle" class="hl-c">restic</text>
+<rect x="50" y="630" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="114.0" y="651" text-anchor="middle" class="hl-c">Headlamp</text>
+<rect x="194" y="630" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="258.0" y="651" text-anchor="middle" class="hl-c">kube-ops-view</text>
+<rect x="338" y="630" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#99cc99" stroke-opacity="0.55"/>
+<text x="402.0" y="651" text-anchor="middle" class="hl-c">descheduler</text>
+<rect x="660" y="250" width="210" height="120" rx="8" fill="#393939" stroke="#cc99cc" stroke-width="1.5"/>
+<text x="765.0" y="299.0" text-anchor="middle" class="hl-t" font-size="16" fill="#cc99cc">TrueNAS</text>
+<text x="765.0" y="317.0" text-anchor="middle" class="hl-s">ZFS storage</text>
+<text x="765.0" y="334.0" text-anchor="middle" class="hl-s">NFS volumes for apps</text>
+<path d="M632,310 L658,310" fill="none" stroke="#a09f93" stroke-width="1.6" marker-start="url(#hl-arrow-s)" marker-end="url(#hl-arrow)"/>
+<rect x="660" y="740" width="210" height="56" rx="8" fill="#393939" stroke="#ffcc66" stroke-width="1.5"/>
+<text x="765.0" y="765.0" text-anchor="middle" class="hl-t" font-size="15" fill="#ffcc66">Backblaze B2</text>
+<text x="765.0" y="783.0" text-anchor="middle" class="hl-s">offsite backups</text>
+<path d="M765,370 L765,738" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<text x="30" y="822" text-anchor="start" class="hl-h" fill="#99cc99">HOW CHANGES SHIP</text>
+<rect x="30" y="860" width="180" height="80" rx="8" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="120.0" y="888.5" text-anchor="middle" class="hl-t" font-size="15" fill="#f2f0ec">git push</text>
+<text x="120.0" y="906.5" text-anchor="middle" class="hl-s">me, or a</text>
+<text x="120.0" y="923.5" text-anchor="middle" class="hl-s">Renovate PR</text>
+<rect x="260" y="860" width="190" height="80" rx="8" fill="#393939" stroke="#99cc99" stroke-width="1.5"/>
+<text x="355.0" y="888.5" text-anchor="middle" class="hl-t" font-size="15" fill="#99cc99">Concourse</text>
+<text x="355.0" y="906.5" text-anchor="middle" class="hl-s">runs in the cluster</text>
+<text x="355.0" y="923.5" text-anchor="middle" class="hl-s">branch diffs → Discord</text>
+<path d="M210,900 L258,900" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<rect x="500" y="848" width="370" height="42" rx="6" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="516" y="874" class="hl-c" font-weight="700">Helmsman apply</text>
+<text x="854" y="874" text-anchor="end" class="hl-s">→ the cluster</text>
+<path d="M450,900 L474,900 L474,869 L498,869" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<rect x="500" y="900" width="370" height="42" rx="6" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="516" y="926" class="hl-c" font-weight="700">image builds</text>
+<text x="854" y="926" text-anchor="end" class="hl-s">→ Docker Hub → this site</text>
+<path d="M450,900 L474,900 L474,921 L498,921" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<rect x="500" y="952" width="370" height="42" rx="6" fill="#393939" stroke="#515151" stroke-width="1.5"/>
+<text x="516" y="978" class="hl-c" font-weight="700">OpenTofu plan</text>
+<text x="854" y="978" text-anchor="end" class="hl-s">→ Cloudflare · B2 · OCI</text>
+<path d="M450,900 L474,900 L474,973 L498,973" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
+<text x="884" y="1024" text-anchor="end" class="hl-s" fill="#a09f93">updated Nov 2026</text>
+</svg>

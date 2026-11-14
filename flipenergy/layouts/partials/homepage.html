@@ -6,7 +6,7 @@
   <h1 class="headline">Current Homelab Diagram</h1>
 
   <div class="diagram">
-    <img src="{{ "img/homelab.jpg" | relURL }}">
+    {{ readFile "static/img/homelab.svg" | safeHTML }}
   </div>
 
   <br>
