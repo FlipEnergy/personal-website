@@ -155,6 +155,10 @@ pre, code {
 
 /* Header Layout */
 
+header .container {
+  text-align: center;
+}
+
 header a.path {
   color: #6699cc;
   color: var(--base0d);
@@ -227,6 +231,7 @@ footer a {
 }
 
 .homepage h1.headline {
+  text-align: center;
   font-size: 3em;
   color: #ffcc66;
   color: var(--base0a);
@@ -276,6 +281,7 @@ footer a {
 /* Post List Layout */
 
 .article-list h1.list-title {
+  text-align: center;
   font-size: 3em;
   color: #ffcc66;
   color: var(--base0a);
@@ -289,6 +295,7 @@ footer a {
 
 .article-list article h2.headline,
 .article-list article h2.headline a {
+  text-align: center;
   margin-top: 0;
   color: #6699cc;
   color: var(--base0d);
@@ -362,6 +369,7 @@ article.single .meta .val, article.single .meta .val a {
 }
 
 article.single h1.headline {
+  text-align: center;
   margin-top: 0;
   font-size: 3em;
   color: #ffcc66;
@@ -385,6 +393,13 @@ article.single section.body {
     padding-top: 2rem;
     padding-bottom: 1rem;
   }
+}
+
+/* Center headings inside post bodies and list summaries */
+
+article.single section.body :is(h1, h2, h3, h4, h5, h6),
+.article-list article section.summary :is(h1, h2, h3, h4, h5, h6) {
+  text-align: center;
 }
 
 /* Highlight Colors */

@@ -38,7 +38,7 @@ Hugo static blog/homepage for https://pleasenoddos.com (owner: FlipEnergy / Denn
 
 - Path: `flipenergy/content/post/<slug>.md`; images go in `flipenergy/content/post/<slug>/` and are referenced relatively.
 - Front matter: `title`, `date`, `draft`. New posts: `make new name=<slug>` (archetype sets `draft: true` — flip it to `false` to publish).
-- Hugo is pinned to 0.96.0 in `mise.toml` (install with `make tools`; the Makefile runs it via `mise exec`). CI uses `klakegg/hugo:alpine`. Avoid features newer than 0.96.
+- Local Hugo is pinned in `mise.toml` (Renovate bumps it; install with `make tools`, and the Makefile runs it via `mise exec`). CI builds with the `klakegg/hugo:alpine` image instead, which is unmaintained and much older than the local version, so templates must work on both. Don't adopt newer replacements for deprecated functions (e.g. `.Site.Language.Locale` for `.Site.LanguageCode`) until CI uses the same Hugo.
 
 ## Commands
 
