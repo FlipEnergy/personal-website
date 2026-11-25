@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1034" width="900" height="1034" class="hl-diagram" role="img" aria-labelledby="hl-title hl-desc">
 <title id="hl-title">Dennis Zhang's homelab, November 2026</title>
-<desc id="hl-desc">Visitors reach the homelab through Cloudflare, then an OPNsense firewall, into a three-node Kubernetes cluster on Talos Linux running self-hosted apps, with a TrueNAS box for NFS storage and offsite backups to Backblaze B2. Changes ship from GitHub through Concourse CI, which runs Helmsman, image builds and OpenTofu.</desc>
+<desc id="hl-desc">Visitors reach the homelab through Cloudflare and a Cloudflare Tunnel, past an OPNsense firewall, into a three-node Kubernetes cluster on Talos Linux where Traefik routes requests to self-hosted apps, with a TrueNAS box for NFS storage and offsite backups to Backblaze B2. Changes ship from GitHub through Concourse CI, which runs Helmsman, image builds and OpenTofu.</desc>
 <style>
 .hl-diagram text { font-family: 'Source Code Pro', 'DejaVu Sans Mono', monospace; }
 .hl-diagram .hl-t { font-weight: 700; }
@@ -34,7 +34,7 @@
 <text x="450.0" y="185.0" text-anchor="middle" class="hl-t" font-size="15" fill="#6699cc">OPNsense</text>
 <text x="450.0" y="203.0" text-anchor="middle" class="hl-s">firewall · local DNS</text>
 <path d="M390,96 L390,158" fill="none" stroke="#a09f93" stroke-width="1.6" marker-end="url(#hl-arrow)"/>
-<text x="398" y="118" text-anchor="start" class="hl-s" fill="#a09f93">HTTPS</text>
+<text x="398" y="118" text-anchor="start" class="hl-s" fill="#a09f93">Cloudflare Tunnel</text>
 <path d="M115,96 L115,188 L298,188" fill="none" stroke="#a09f93" stroke-width="1.6" stroke-dasharray="6 5" marker-end="url(#hl-arrow)"/>
 <text x="124" y="180" text-anchor="start" class="hl-s" fill="#a09f93">WireGuard VPN</text>
 <rect x="30" y="250" width="600" height="440" rx="10" fill="#393939" fill-opacity="0.45" stroke="#66cccc" stroke-width="1.8"/>
@@ -51,7 +51,7 @@
 <text x="522" y="315" text-anchor="middle" class="hl-c" font-weight="700">medium node</text>
 <text x="522" y="333" text-anchor="middle" class="hl-s">control plane + apps</text>
 <rect x="50" y="362" width="560" height="38" rx="6" fill="#2d2d2d" stroke="#f99157" stroke-opacity="0.7"/>
-<text x="330" y="386" text-anchor="middle" class="hl-c">ingress-nginx · cert-manager · cf-ddns</text>
+<text x="330" y="386" text-anchor="middle" class="hl-c">Traefik · cert-manager · cloudflared · cf-ddns</text>
 <text x="50" y="428" text-anchor="start" class="hl-h" fill="#ffcc66">apps</text>
 <rect x="50" y="438" width="128" height="32" rx="6" fill="#2d2d2d" stroke="#ffcc66" stroke-opacity="0.55"/>
 <text x="114.0" y="459" text-anchor="middle" class="hl-c">Nextcloud</text>

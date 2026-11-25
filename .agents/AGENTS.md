@@ -56,4 +56,4 @@ Changes to only `Makefile`, `README.md`, `.gitignore`, `renovate.json` don't tri
 ## Notes
 
 - `flipenergy/public/` and `notes.md` are gitignored build output / scratch.
-- DNS for the domain is in `tf-playground`; the cert issuer `letsencrypt-homelab` and ingress-nginx come from `k8s-homelab`.
+- DNS for the domain is in `tf-playground`; the cert issuer `letsencrypt-homelab` and the Traefik ingress controller (default IngressClass) come from `k8s-homelab`.
