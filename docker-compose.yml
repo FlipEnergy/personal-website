@@ -3,4 +3,4 @@ services:
   web:
     image: flipenergy/flipenergy:latest
     ports:
-      - "80:80"
+      - "80:8080"

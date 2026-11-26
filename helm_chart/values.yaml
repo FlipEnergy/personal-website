@@ -6,6 +6,10 @@ controllers:
           repository: flipenergy/flipenergy
           pullPolicy: Always
           tag: latest
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop: ["ALL"]
         resources:
           limits:
             cpu: 100m
@@ -17,12 +21,22 @@ controllers:
 strategy:
   type: RollingUpdate
 
+# The image runs nginx as its unprivileged nginx user on port 8080.
+defaultPodOptions:
+  securityContext:
+    runAsUser: 101
+    runAsGroup: 101
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+
 service:
   main:
     controller: main
     ports:
       http:
         port: 80
+        targetPort: 8080
 
 ingress:
   main:
